@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-  <title>Rock Paper Scissors</title>
-</head>
-<body>
-  
-</body>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <script>
+      // to create a function that randomly return either 'Rock', 'Paper' or 'Scissors'
+      // 1. the function to get three random numbers
+      function getRandomNum() {
+        return Math.floor(Math.random() * 3);
+      }
+
+      const i = getRandomNum();
+
+      // 2. assign each num either 'Rock', 'Paper' or 'Scissors'
+      if (i === 2) {
+        console.log("Rock");
+      } else if (i === 1) {
+        console.log("Paper");
+      } else {
+        console.log("Scissors");
+      }
+
+      
+    </script>
+  </body>
 </html>
