@@ -8,23 +8,50 @@
   <body>
     <script>
       // to create a function that randomly return either 'Rock', 'Paper' or 'Scissors'
-      // 1. the function to get three random numbers
-      function getRandomNum() {
-        return Math.floor(Math.random() * 3);
+      // 1. get three random numbers     
+      let i = Math.floor(Math.random() * 3);
+    
+  
+      // 2. assign each number either 'Rock', 'Paper' or 'Scissors'
+      function computerPlay() {
+        if (i === 2) {
+          return "rock";
+        } else if (i === 1) {
+          return "paper";
+        } else {
+          return "scissors";
+        }
       }
 
-      const i = getRandomNum();
+      const COMPUTER = computerPlay()
 
-      // 2. assign each num either 'Rock', 'Paper' or 'Scissors'
-      if (i === 2) {
-        console.log("Rock");
-      } else if (i === 1) {
-        console.log("Paper");
-      } else {
-        console.log("Scissors");
-      }
-
+      // 3. receive Player's inputs from the prompt and make them case insensitive
+      const j = prompt('Type either "Rock", "Paper" or "Scissors"')
+      const PLAYER = j.toLowerCase()
       
+      // 4. show "Type valid word" message
+      if (PLAYER !== 'rock' && PLAYER !== 'paper' && PLAYER !== 'scissors'){
+        prompt('Invalid word. Please type valid word')
+      }
+
+      // 5. compare inputs from both and print the result message
+      if (COMPUTER === 'scissors' && PLAYER === 'paper'){
+        console.log(`You Lose`)
+      } else if (COMPUTER === 'scissors' && PLAYER === 'rock'){
+        console.log('You Win!')
+      } else if (COMPUTER === 'paper' && PLAYER === 'scissors'){
+        console.log('You Win!')
+      } else if (COMPUTER === 'paper' && PLAYER === 'rock'){
+        console.log(`You Lose`)
+      } else if (COMPUTER === 'rock' && PLAYER === 'paper'){
+        console.log('You Win!')
+      } else if (COMPUTER === 'rock' && PLAYER === 'scissors'){
+        console.log('You Lose!')
+      } else {
+        console.log(`It's a tie`)
+      }
+
+ 
     </script>
   </body>
 </html>
