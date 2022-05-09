@@ -1,12 +1,13 @@
- // to create a function that randomly return either 'Rock', 'Paper' or 'Scissors'
-      // 1. get three random numbers
-      let i = Math.floor(Math.random() * 3);
+ // create a function that randomly returns either 'Rock', 'Paper' or 'Scissors'
 
-      // 2. assign each number either 'Rock', 'Paper' or 'Scissors' to computerPlay
+      // 1. get three random numbers
+      let random_num = Math.floor(Math.random() * 3);
+
+      // 2. assign each number either 'Rock', 'Paper' or 'Scissors' 
       function computerPlay() {
-        if (i === 2) {
+        if (random_num === 2) {
           return "rock";
-        } else if (i === 1) {
+        } else if (random_num === 1) {
           return "paper";
         } else {
           return "scissors";
@@ -16,8 +17,8 @@
       const COMPUTER = computerPlay();
 
       // 3. receive Player's inputs from the prompt and make them case insensitive
-      const j = prompt('Type either "Rock", "Paper" or "Scissors"');
-      const PLAYER = j.toLowerCase();
+      const player_input = prompt('Type either "Rock", "Paper" or "Scissors"');
+      const PLAYER = player_input.toLowerCase();
 
       // 4. show "Type valid word" message
       if (PLAYER !== "rock" && PLAYER !== "paper" && PLAYER !== "scissors") {
