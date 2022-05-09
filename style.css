@@ -12,8 +12,14 @@ p {
   }
 
 h1 {
-  margin-top: 150px;
+  margin: 120px 0 0 0;
   }
+
+  p {
+    margin-top: 40px;
+    /* display: none; */
+  }
+
 
 .result-container {
   background: rgb(162, 107, 3);
@@ -22,9 +28,7 @@ h1 {
   margin: auto;
   border-radius: 10px;
   display: flex;
-  /* gap: 40px; */
   justify-content: space-evenly;
-  /* padding-left: 20px; */
   }
 
 .result {
@@ -54,6 +58,10 @@ li {
 .icon-container {
   display: flex;
   justify-content: center;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  top: 520px;
   gap: 50px;
   }
 
@@ -68,5 +76,6 @@ i {
 
 i:hover {
   transition-duration: 0.4s;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  cursor: pointer;
   }
