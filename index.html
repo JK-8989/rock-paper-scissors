@@ -2,57 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/2ee8ce4aa8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
-    <script>
-      // to create a function that randomly return either 'Rock', 'Paper' or 'Scissors'
-      // 1. get three random numbers
-      let i = Math.floor(Math.random() * 3);
+    <header>
+      <h1>Rock Paper Scissors!</h1>
+      <h2>3 wins out of 5</h2>
+    </header>
+    <main>
+      <section id="section_1">
+        <div class="result-container">
+          <ul class="player result">
+            <li>You</li>
+            <li class="score" id="player-score">0</li>
+          </ul>
+          <ul class="computer result">
+            <li>Computer</li>
+            <li class="score" id="computer-score">0</li>
+          </ul>
+        </div>
+      </section>
+      <section id="section_2">
+        <p>Choose your weapon</p>
+        <div class="icon-container">
+          <i class="fa-solid fa-hand-fist"></i>
+          <i class="fa-solid fa-hand"></i>
+          <i class="fa-solid fa-hand-scissors"></i>
+        </div>
+      </section>
+    </main>
 
-      // 2. assign each number either 'Rock', 'Paper' or 'Scissors'
-      function computerPlay() {
-        if (i === 2) {
-          return "rock";
-        } else if (i === 1) {
-          return "paper";
-        } else {
-          return "scissors";
-        }
-      }
-
-      const COMPUTER = computerPlay();
-
-      // 3. receive Player's inputs from the prompt and make them case insensitive
-      const j = prompt('Type either "Rock", "Paper" or "Scissors"');
-      const PLAYER = j.toLowerCase();
-
-      // 4. show "Type valid word" message
-      if (PLAYER !== "rock" && PLAYER !== "paper" && PLAYER !== "scissors") {
-        prompt("Invalid word. Please type valid word");
-      }
-
-      // 5. compare inputs from both and print the result message
-      function game() {
-        if (COMPUTER === "scissors" && PLAYER === "paper") {
-          console.log(`You Lose`);
-        } else if (COMPUTER === "scissors" && PLAYER === "rock") {
-          console.log("You Win!");
-        } else if (COMPUTER === "paper" && PLAYER === "scissors") {
-          console.log("You Win!");
-        } else if (COMPUTER === "paper" && PLAYER === "rock") {
-          console.log(`You Lose`);
-        } else if (COMPUTER === "rock" && PLAYER === "paper") {
-          console.log("You Win!");
-        } else if (COMPUTER === "rock" && PLAYER === "scissors") {
-          console.log("You Lose!");
-        } else if (COMPUTER === PLAYER){
-          console.log(`It's a tie`);
-        }
-      }
-      game()
-
-    </script>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
