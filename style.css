@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(63, 63, 63);
+  color: rgb(230, 229, 229);
+  font-size: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1 ,h2, p {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 150px;
+}
+
+.icon-container{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+i {
+  background-color: rgb(34, 33, 33);
+  padding: 20px;
+  color: #ddd;
+  font-size: 3em;
+  border: 2px solid rgb(177, 175, 175);
+  border-radius: 20px;
+}
+i:hover {
+  transition-duration: 0.4s;
+  transform: scale(1.1);
+}
